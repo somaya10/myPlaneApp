@@ -1,0 +1,5 @@
+- name: 'flight-plan'
+  folder: ''
+  type: 'file'
+  options:
+    folder: '/var/lib/grafana/dashboards'

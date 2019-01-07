@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+ name: exporter-mongo-deployment
+spec:
+ replicas: 2
+ template:
+  metadata:
+   labels:
+    app: web
+  spec:
+   containers:
+    - name: mongodb-exporter
+      image: "gcr.io/mercedes-flight-service/mongo-exporter:v1"
+      ports:
+       - containerPort: 9001
+      command: ["./mongodb_exporter"]
+      args: ["-logtostderr", "mongodb.uri mongodb://35.184.220.103:30665/flightplan","-groups.enabled 'asserts,durability,background_flusshing,connections,extra_info,global_lock,index_counters,network,op_counters,op_counters_repl,memory,locks,metrics'"]  

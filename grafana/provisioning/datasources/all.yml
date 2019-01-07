@@ -1,0 +1,9 @@
+datasources:
+- name: 'prom1'
+  type: 'prometheus'
+  access: 'proxy'
+  org_id: 1
+  url: 'http://35.184.220.103:32514'
+  is_default: true
+  version: 1
+  editable: true
