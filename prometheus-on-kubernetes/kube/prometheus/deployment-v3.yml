@@ -14,9 +14,6 @@ spec:
           image: prom/prometheus:v1.2.1
           args:
             - "-config.file=/etc/prometheus/conf/prometheus.yml"
-            # Metrics are stored in an emptyDir volume which
-            # exists as long as the Pod is running on that Node.
-            # The data in an emptyDir volume is safe across container crashes.
             - "-storage.local.path=/prometheus/"
           ports:
             - containerPort: 9090

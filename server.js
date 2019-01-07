@@ -18,7 +18,7 @@ mongoose.connect("mongodb://35.184.220.103:30665/flightplan", function(err, db) 
   }
 });
 
-
+// Basic Authentication
 var auth = function (req, res, next) {
   var user = basicAuth(req);
   if (!user || !user.name || !user.pass) {
@@ -35,6 +35,7 @@ var auth = function (req, res, next) {
   }
 }
 
+// Prometheus API metrics
 const apiMetrics = require('prometheus-api-metrics');
 app.use(apiMetrics());
 
