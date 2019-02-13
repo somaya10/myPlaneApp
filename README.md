@@ -2,12 +2,6 @@
 
 This application lets you perform simple CRUD Operations on a Flight planning system.
 
-Important URLs:
-
-- API : http://35.184.220.103:31259/v1/flights (Credentials: username: myPlaneApp, password: ProjectPlaneMeConnect1101)
-- Prometheus : http://35.184.220.103:32514/targets
-- Grafana : http://35.184.220.103:31948/dashboards (Credentials: username: admin, password: admin)
-
 The app is protected with Basic Auth and has the following apis exposed:
 
 1. GET /v1/flights : Returns all flights
